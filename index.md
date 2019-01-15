@@ -45,7 +45,7 @@
         </tr>
         <tr>
             <td>本文</td>
-            <td><textarea id="mail_textbody" cols=35 rows=10 placeholder="本文"></textarea></td>
+            <td><textarea id="mail_textbody" cols="35" rows="10" placeholder="本文"></textarea></td>
         </tr>
         <tr>
             <td colspan="2">
