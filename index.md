@@ -1,8 +1,42 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>メール送信テスト画面</title>
+    <link rel="stylesheet" href="">
+    <script src="javascript/index.js" type="text/javascript" charset="utf-8" ></script>
   </head>
   <body>
+    <input type='hidden' id='hidden_data' value='送信したい情報をここに記載'>
+    <button id='mail'>メール送信</button>
+    <script>
+# index.js
+/**
+ * メーラーを起動してメールを送信する
+ */
+
+window.onload = function() {
+
+    /**
+   * メールに記載する情報を格納する変数
+   */
+    var address, subject, body, hiddenData;
+    var sendmail = document.getElementById('mail');
+
+    sendmail.onclick = function() {
+
+        // メールに記載したい情報をhiddenタグから取得
+        hiddenData = document.getElementById('hidden_data').value;
+        address = '~@co.jp';
+        subject = '件名';
+        body = '本文' + hiddenData;
+
+        location.href = 'mailto:' + address + '?subject=' + subject + '&body=' + body;
+    };
+
+};      
+    </script>
+    
     <div align="center">
       <h1>Search Chords Mode</h1>
       <hr size="2" width="90%" align="center" color="blue">
