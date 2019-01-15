@@ -4,7 +4,6 @@
   </head>
   <body>
     <script type="text/javascript">
-//<!--
     window.moveTo(screen.width/2-150, screen.height/2-150);
     window.resizeTo(400, 300);
  
@@ -35,7 +34,6 @@
             alert(e.message);
         }
     }
-//-->
     </script>
 
     <div style="background-color : #CCC;">
